@@ -123,7 +123,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Ajax settings
-CSRF_TRUSTED_ORIGINS = ["http://localhost:13001"]
-CORS_ALLOWED_ORIGINS = ["http://localhost:13001"]
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = ["*"]
 CORS_ALLOW_HEADERS = ["*"]

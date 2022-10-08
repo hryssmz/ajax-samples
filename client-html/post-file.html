@@ -53,7 +53,7 @@
         formData.append("gender", genderField.value);
         formData.append("text_file", textFileField.files[0]);
 
-        fetch(`${host}/file/`, { method: "POST", body: formData })
+        return fetch(`${host}/file/`, { method: "POST", body: formData })
           .then(res => res.json())
           .then(res => {
             textContentBlock.textContent = res.text_content;
@@ -61,7 +61,7 @@
           .catch(console.error);
       }
 
-      form.onsubmit = async e => {
+      form.onsubmit = e => {
         e.preventDefault();
         submit();
       };
